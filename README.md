@@ -1,10 +1,12 @@
 # SDR-FM-Receiver-Project
 
 Project Overview
+
   This project implements a fully funtional Wideband FM (WBFM) built from the ground up using GNU Radio and RTL-SDR V4. This project is not only for high-quality audio reception but also as a diagnostic
   tool to diagnostic hidden digital layers of comercial radio broadcast, specifically the RDS (Radio Data System) subcarrier.
 
 System features
+
   High-Fidelity FM - Reception 
     Carrier Tuning: Real - time frequency control to navigate between 88 MHz - 108 Mhz spectrum.
     WMBM Demodulation: Processing of widebands signal with proper quadrature demodulation.
@@ -16,6 +18,7 @@ RDS Data Exploration (Advanced layer)
     Signal Integrity: Analysis of BPSK modulation and phase synchronization.
 
 Hardware and debugging
+
   A major focus of this project was the "real world" behavior of the RTL SDR-V4
     Noise Floor and sensibility: Documenting how the noise floor (broadband interference) impacts weak signals.
     Thermal stabiliy: Analysis of how heat affects frequency presicion in plastic-cased SDRs.
