@@ -1,46 +1,43 @@
 # SDR-FM-Receiver-Project
+---
 
-Project Overview
+## 📝 Project Overview
+This project implements a **fully functional Wideband FM (WBFM)** receiver built from the ground up using **GNU Radio** and **RTL-SDR V4**. 
 
-  This project implements a fully funtional Wideband FM (WBFM) built from the ground up using GNU Radio and RTL-SDR V4. This project is not only for high-quality audio reception but also as a diagnostic
-  tool to diagnostic hidden digital layers of comercial radio broadcast, specifically the RDS (Radio Data System) subcarrier.
+It serves not only for high-quality audio reception but also as a **diagnostic tool** to analyze hidden digital layers of commercial radio broadcasts, specifically the **RDS (Radio Data System)** subcarrier.
 
-System features
+---
 
-  High-Fidelity FM - Reception 
-  
-  Carrier Tuning: Real - time frequency control to navigate between 88 MHz - 108 Mhz spectrum.
-  
-  WMBM Demodulation: Processing of widebands signal with proper quadrature demodulation.
-  
-  Audio optimization: Implementation of a Low pass filter and Audio sink with resampling to ensure to clear the audio output.
+## 🚀 System Features
 
-RDS Data Exploration (Advanced layer)
+### 🎧 High-Fidelity FM Reception
+* **Carrier Tuning:** Real-time frequency control to navigate the **88 MHz - 108 MHz** spectrum.
+* **WBFM Demodulation:** Processing of wideband signals with proper quadrature demodulation.
+* **Audio Optimization:** Implementation of a *Low Pass Filter* and *Audio Sink* with resampling to ensure a clear audio output.
 
-  Beyond the layer this programm isolates the 57kHz carrier inside the bandwidth of one radio station.
-  
-  Spectrum centering: Using the "Frequency Xlating Fir Filter" to pull digital data from the FM sidevbands
-  
-  Signal Integrity: Analysis of BPSK modulation and phase synchronization.
+### 🔍 RDS Data Exploration (Advanced Layer)
+Beyond the audio, this program isolates the **57kHz carrier** inside the bandwidth of the radio station:
+* **Spectrum Centering:** Utilizing the **Frequency Xlating FIR Filter** to extract digital data from the FM sidebands.
+* **Signal Integrity:** Analysis of **BPSK modulation** and phase synchronization.
 
-Hardware and debugging
+---
 
-  A major focus of this project was the "real world" behavior of the RTL SDR-V4
-  
-  Noise Floor and sensibility: Documenting how the noise floor (broadband interference) impacts weak signals.
-  
-  Thermal stabiliy: Analysis of how heat affects frequency presicion in plastic-cased SDRs.
-  
-  Dynamic Range: Finding the balance between RF Gain and signal distortion (clipping).
+## 🛠 Hardware & Debugging
+A major focus of this project was the **"real-world" behavior** of the **RTL-SDR V4**:
 
-How to run.
+| Focus Area | Description |
+| :--- | :--- |
+| **Noise Floor** | Documenting how broadband interference impacts weak signals. |
+| **Thermal Stability** | Analysis of heat-induced frequency drift in plastic-cased SDRs. |
+| **Dynamic Range** | Balancing RF Gain vs. signal distortion (clipping). |
 
-1- conect your sdr.
+---
 
-2- open "SDR_Radio_FM.grc" in GNU Radio companion.
+## 🖥️ How to Run
 
-3- Execute the flowgraph.
+1.  **Connect** your RTL-SDR.
+2.  **Open** `SDR_Radio_FM.grc` in GNU Radio Companion.
+3.  **Execute** the flowgraph.
+4.  **Tune:** Use the *Frequency Slider* to find a station and the *Filter Slider* to hunt for the RDS peak at **57kHz**.
 
-4- Use the frequency slider to find your favorite station and the Filter Slider to hunt for the RDS peak at 57kHz.
-
-Note: The frequency slider is already pre-configurated to tune radio station jumping 200Khz for each click.
+> **Note:** The frequency slider is pre-configured to jump **200kHz** per click for standard station spacing.
