@@ -19,7 +19,7 @@ Beyond the audio, this program isolates the **57kHz carrier** inside the bandwid
 * **Spectrum Centering:** Utilizing the **Frequency Xlating FIR Filter** to extract digital data from the FM sidebands.
 * **Signal Integrity:** Analysis of **BPSK modulation** and phase synchronization.
 
----
+
 
 ##  Hardware & Debugging
 A major focus of this project was the **"real-world" behavior** of the **RTL-SDR V4**:
@@ -30,7 +30,7 @@ A major focus of this project was the **"real-world" behavior** of the **RTL-SDR
 | **Thermal Stability** | Analysis of heat-induced frequency drift in plastic-cased SDRs. |
 | **Dynamic Range** | Balancing RF Gain vs. signal distortion (clipping). |
 
----
+
 
 ##  How to Run
 
